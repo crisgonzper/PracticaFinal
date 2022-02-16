@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead>
+                    <th>ID</th>
+                    <th>Nombre</th> 
+                    <th>Peso</th> 
+                    <th>Altura</th>
+                    <th>Esperanza de vida</th>
+                    
+            </thead>
+            <tbody>
+                <tr *ngFor="let raza of razas"> 
+                    <td>{{raza.id}}</td>
+                    <td>{{raza.name}}</td>
+                    <td>{{raza.weight.metric}}   cm</td>
+                    <td>{{raza.height.metric}}   Kg</td> 
+                    <td>{{raza.life_span}}</td> 
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
