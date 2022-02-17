@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RazasService } from '../servicio/razas.service';
 
+
 @Component({
   selector: 'app-razas',
   templateUrl: './razas.component.html',
@@ -9,7 +10,7 @@ import { RazasService } from '../servicio/razas.service';
 export class RazasComponent implements OnInit {
 
   razas:any;
-
+ public page!:number;
 
   constructor(private razasService:RazasService) { 
     this.listarRazas();

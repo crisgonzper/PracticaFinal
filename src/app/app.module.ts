@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms'; 
 import { Routes, RouterModule} from '@angular/router'; 
 import { HttpClientModule} from '@angular/common/http';
-
+import { NgxPaginationModule } from 'ngx-pagination'
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { ListadoComponent } from './listado/listado.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { RazasComponent } from './razas/razas.component';
+import { UsuarioLogadoComponent } from './usuario-logado/usuario-logado.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -33,14 +35,17 @@ const routes: Routes =[
     HeaderComponent,
     ListadoComponent,
     BusquedaComponent,
-    RazasComponent
+    RazasComponent,
+    UsuarioLogadoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,    
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxPaginationModule
   ],
   providers: [
     FormBuilder
