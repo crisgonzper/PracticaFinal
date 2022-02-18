@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { TranslateService } from '@ngx-translate/core'
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(translate:TranslateService) {
+    translate.setDefaultLang('es');
+    translate.use('es');
+   }
 
   ngOnInit(): void {
   }
