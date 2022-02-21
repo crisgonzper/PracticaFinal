@@ -15,6 +15,7 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 import { RazasComponent } from './razas/razas.component';
 import { UsuarioLogadoComponent } from './usuario-logado/usuario-logado.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimalesComponent } from './animales/animales.component';
 
 
 
@@ -37,7 +38,8 @@ const routes: Routes =[
     ListadoComponent,
     BusquedaComponent,
     RazasComponent,
-    UsuarioLogadoComponent
+    UsuarioLogadoComponent,
+    AnimalesComponent
   ],
   imports: [
     BrowserModule,

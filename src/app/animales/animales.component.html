@@ -1,0 +1,49 @@
+
+<div class="row">
+  
+    <div class="col-12">
+        <h5>Formulario de busqueda:</h5>
+        <div class="form-group">
+            <label for="controlNombre">Tipo</label>
+            <input type="text" [(ngModel)]="Tipo" class="form-control" placeholder="Tipo" />
+        </div>
+        <div class="form-group">
+            <label for="controlNombre">Nombre</label>
+            <input type="text" [(ngModel)]="Nombre" class="form-control" placeholder="Nombre" />
+        </div>
+        
+        <button class="btn btn-primary" (click)="buscarAnimal(Tipo,Nombre)">Buscar</button>
+    </div>
+
+</div>
+<br>
+<hr>
+<br>
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead>
+                    <th>ID</th>
+                    <th>Tipo</th> 
+                    <th>Nombre</th> 
+                    <th>Observacion</th>
+                    <th>Ubicacion</th>
+                    <th>Rasgos</th>
+                    <th>Imagen</th>
+                    
+            </thead>
+            <tbody>
+                <tr *ngFor="let animal of animales | paginate: { itemsPerPage: 5, currentPage: page }  "> 
+                    <td>{{animal.id}}</td>
+                    <td>{{animal.Tipo}}</td>
+                    <td>{{animal.Nombre}}</td>
+                    <td>{{animal.Observacion}}</td> 
+                    <td>{{animal.Ubicacion}}</td> 
+                    <td>{{animal.Rasgos}}</td> 
+                    <td><a href="{{animal.Imagen}}">imagen</a></td> 
+                   
+                </tr>
+            </tbody>
+        </table>
+        <pagination-controls (pageChange)="page= $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+    </div>

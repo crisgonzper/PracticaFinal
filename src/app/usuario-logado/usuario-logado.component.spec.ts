@@ -1,13 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { UsuarioLogadoComponent } from './usuario-logado.component';
 
-describe('UsuarioLogadoComponent', () => {
+fdescribe('UsuarioLogadoComponent', () => {
   let component: UsuarioLogadoComponent;
   let fixture: ComponentFixture<UsuarioLogadoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [        
+        HttpClientTestingModule            
+    ],
       declarations: [ UsuarioLogadoComponent ]
     })
     .compileComponents();
